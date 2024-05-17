@@ -1,0 +1,1 @@
+/mnt/c/Users/kiman/Development/web3clubs/math4web3/euclidean_algorithm_with_rust/target/debug/euclidean_algorithm_with_rust: /mnt/c/Users/kiman/Development/web3clubs/math4web3/euclidean_algorithm_with_rust/src/main.rs
