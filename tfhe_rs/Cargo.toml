@@ -1,0 +1,7 @@
+[package]
+name = "tfhe_rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tfhe = { version = "0.7.2", features = [ "boolean", "shortint", "integer", "x86_64-unix" ] }
