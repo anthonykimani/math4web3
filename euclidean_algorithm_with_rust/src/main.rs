@@ -1,5 +1,15 @@
 fn main() {
-    get_gcd(3345679, 4276543);
+    println!("Enter First Number: ");
+    let mut input = String::new();
+    std::io::stdin().read_line(&mut input).expect("Failed to read line");
+    let first_num: i32 = input.trim().parse().expect("Please enter a number");
+
+    println!("Enter Second Number: ");
+    let mut input = String::new();
+    std::io::stdin().read_line(&mut input).expect("Failed to read line");
+    let second_num: i32 = input.trim().parse().expect("Please enter a number");
+    // or use 12600 , 756 to test large numbers
+    get_gcd(first_num, second_num);
 }
 
 fn get_gcd(num_one: i32, num_two: i32) -> i32 {
