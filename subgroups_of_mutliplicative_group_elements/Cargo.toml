@@ -1,0 +1,6 @@
+[package]
+name = "subgroups_of_mutliplicative_group_elements"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

@@ -1,0 +1,1 @@
+/mnt/c/Users/kiman/Development/web3clubs/math4web3/subgroups_of_mutliplicative_group_elements/target/debug/subgroups_of_mutliplicative_group_elements: /mnt/c/Users/kiman/Development/web3clubs/math4web3/subgroups_of_mutliplicative_group_elements/src/main.rs

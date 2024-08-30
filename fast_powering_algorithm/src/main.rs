@@ -1,7 +1,7 @@
 fn main() {
-    let base = 7 ;
-    let exponent = 35;
-    let modulus = 27;
+    let base = 3 ;
+    let exponent = 265;
+    let modulus = 17;
     let result = mod_exp(base, exponent, modulus);
     println!("{}^{} mod {} = {}", base, exponent,  modulus, result);
 }
