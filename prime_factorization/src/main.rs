@@ -1,5 +1,5 @@
 fn main() {
-    let number = 56;
+    let number = 60;
     let factors = get_prime_factors(number);
     println!("The Prime Factors of {} is {:?}", number, factors);
 }

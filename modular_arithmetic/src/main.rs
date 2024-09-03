@@ -3,7 +3,7 @@ fn main() {
 }
 
 fn find_mod() -> i32 {
-    println!("Enter Remainder: ");
+    println!("Enter Number: ");
     let mut input = String::new();
     std::io::stdin().read_line(&mut input).expect("Failed to read line");
     let rem: i32 = input.trim().parse().expect("Please enter a number");

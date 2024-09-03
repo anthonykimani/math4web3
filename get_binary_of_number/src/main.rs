@@ -1,6 +1,6 @@
 use std::any::type_name;
 fn main() {
- get_binary(234);
+    get_binary(234);
 }
 
 fn get_binary(number: i64) -> Vec<i64> {
