@@ -72,3 +72,31 @@ fn find_eulers_totient(n: u64) -> u64 {
     }
 }
 ```
+
+## Example Usage
+
+### To find the Euler's Totient for 372, run the program:
+
+```shell
+cargo run
+```
+
+### Output
+```markdown
+Euler's Totient is 120
+```
+
+#### Explanation
+- Prime Check: The is_prime function is used to check if n is a prime number.
+- Prime Factorization: The get_prime_factors function returns the prime factors of n.
+- Totient Calculation: Depending on whether n is prime or composite, the totient is calculated using different approaches as described above.
+
+#### Dependencies
+This project relies on custom modules for:
+- Prime Number Check: `prime::is_prime`
+- Prime Factorization: `prime_factorization::get_prime_factors`
+
+Make sure these modules are implemented and properly imported in your project.
+
+#### License
+This project is licensed under the MIT License.
