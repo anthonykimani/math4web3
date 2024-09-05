@@ -22,7 +22,7 @@ fn extended_gcd(mut dividend: i64, mut divisor: i64) -> (i64, i64, i64) {
 }
 
 fn main() {
-    let (number1, number2) = (48, 18);
+    let (number1, number2) = (7, 120);
     let (gcd, coefficient1, coefficient2) = extended_gcd(number1, number2);
     println!("GCD of {} and {} is {}", number1, number2, gcd);
     println!("Bezout's identity coefficients: x = {}, y = {}", coefficient1, coefficient2);

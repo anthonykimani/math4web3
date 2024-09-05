@@ -36,50 +36,34 @@ GCD(a, b) = ax + by
 ## Example Rust Implementation
 
 ```rust
-fn main() {
-    println!("Enter First Number: ");
-    let mut input = String::new();
-    std::io::stdin().read_line(&mut input).expect("Failed to read line");
-    let first_num: i32 = input.trim().parse().expect("Please enter a number");
+fn extended_gcd(mut dividend: i64, mut divisor: i64) -> (i64, i64, i64) {
+    let mut old_coefficient_dividend = 0;
+    let mut old_coefficient_divisor = 1;
+    let mut coefficient_dividend = 1;
+    let mut coefficient_divisor = 0;
 
-    println!("Enter Second Number: ");
-    let mut input = String::new();
-    std::io::stdin().read_line(&mut input).expect("Failed to read line");
-    let second_num: i32 = input.trim().parse().expect("Please enter a number");
+    while divisor != 0 {
+        let quotient = dividend / divisor;
+        let remainder = dividend % divisor;
+        let new_coefficient_dividend = old_coefficient_dividend - coefficient_dividend * quotient;
+        let new_coefficient_divisor = old_coefficient_divisor - coefficient_divisor * quotient;
 
-    // Call the function to compute the GCD
-    get_gcd(first_num, second_num);
+        dividend = divisor;
+        divisor = remainder;
+        old_coefficient_dividend = coefficient_dividend;
+        old_coefficient_divisor = coefficient_divisor;
+        coefficient_dividend = new_coefficient_dividend;
+        coefficient_divisor = new_coefficient_divisor;
+    }
+
+    (dividend, old_coefficient_dividend, old_coefficient_divisor)
 }
 
-fn get_gcd(num_one: i32, num_two: i32) -> i32 {
-    let mut gcd_a = num_one;
-    let mut gcd_b = num_two;
-
-    if gcd_b > gcd_a {
-        let mut divider = (gcd_b / gcd_a) as i32;
-        let mut remainder = gcd_b - (gcd_a * divider);
-        while remainder != 0 {
-            gcd_b = gcd_a;
-            gcd_a = remainder;
-            divider = (gcd_b / gcd_a) as i32;
-            remainder = gcd_b - (gcd_a * divider);
-        }
-        println!(" The GCD of {} and {} is {}", num_one, num_two, gcd_a);
-        return gcd_a;
-    } else if gcd_b < gcd_a {
-        let mut divider = (gcd_a / gcd_b) as i32;
-        let mut remainder = gcd_a - (gcd_b * divider);
-        while remainder != 0 {
-            gcd_a = gcd_b;
-            gcd_b = remainder;
-            divider = (gcd_a / gcd_b) as i32;
-            remainder = gcd_a - (gcd_b * divider);
-        }
-        println!(" The GCD of {} and {} is {}", num_one, num_two, gcd_b);
-        return gcd_b;
-    } else {
-        println!("numbers may not have a GCD");
-        return 0;
-    }
+fn main() {
+    let (number1, number2) = (48, 18);
+    let (gcd, coefficient1, coefficient2) = extended_gcd(number1, number2);
+    println!("GCD of {} and {} is {}", number1, number2, gcd);
+    println!("Bezout's identity coefficients: x = {}, y = {}", coefficient1, coefficient2);
+    println!("Verification: {}*{} + {}*{} = {}", number1, coefficient1, number2, coefficient2, gcd);
 }
 ```

@@ -1,0 +1,6 @@
+[package]
+name = "rsa_encryption_with_rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
