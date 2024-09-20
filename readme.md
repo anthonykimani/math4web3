@@ -13,6 +13,8 @@ This repository contains foundational mathematical concepts and implementations 
 - [Prime Factorization](prime_factorization)
 - [Subgroups of Multiplicative Group Elements](subgroups_of_mutliplicative_group_elements)
 - [Fully Homomorphic Encryption](tfhe_rs)
+- [Sum of Two Polynomials](polynomial_arithmetic)
+- [Polynomial Arithmetic Over a Range](polynomial_sum)
 
 ---
 
