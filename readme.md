@@ -34,4 +34,4 @@ Contributions to this repository are welcome. Please feel free to submit pull re
 This project is licensed under the MIT License.
 
 ## Contact
-For any queries or suggestions, please open an issue in the GitHub repository. The owner is anthony kimani
+For any queries or suggestions, please open an issue in the GitHub repository.
