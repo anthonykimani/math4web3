@@ -30,8 +30,6 @@ git clone https://github.com/anthonykimani/math4web3.git
 ## Contributing
 Contributions to this repository are welcome. Please feel free to submit pull requests or open issues for any improvements or additions you'd like to suggest.
 
-## License
-This project is licensed under the MIT License.
 
 ## Contact
 For any queries or suggestions, please open an issue in the GitHub repository.
